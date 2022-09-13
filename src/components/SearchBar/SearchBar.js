@@ -1,13 +1,12 @@
 import { IconContext } from 'react-icons';
 import { FcSearch } from 'react-icons/fc';
 import { Formik } from 'formik';
-import PropTypes from 'prop-types';
 import { Header, SearchForm, Button, Input } from './SearchBar.styled';
 
-export const SearchBar = ({ onSubmit }) => {
+export const SearchBar = ({ onChange, handleSubmit, value }) => {
   return (
     <Header>
-      <Formik initialValues={{ query: '' }} onSubmit={onSubmit}>
+      <Formik initialValues={{ value: '' }} onSubmit={handleSubmit}>
         <SearchForm>
           <IconContext.Provider
             value={{
@@ -15,22 +14,20 @@ export const SearchBar = ({ onSubmit }) => {
               className: 'global-class-name',
             }}
           >
-            <Button type="submit">
+            <Button type="button">
               <FcSearch />
             </Button>
           </IconContext.Provider>
 
           <Input
             type="text"
-            name="query"
+            name="searchQuery"
+            value={value}
+            onChange={e => onChange(e.target.value)}
             placeholder="Search images and photos"
           />
         </SearchForm>
       </Formik>
     </Header>
   );
-};
-export default SearchBar;
-SearchBar.propTypes = {
-  onSubmit: PropTypes.func,
 };

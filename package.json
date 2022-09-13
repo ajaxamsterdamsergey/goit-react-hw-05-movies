@@ -2,7 +2,7 @@
   "name": "react-homework-template",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ajaxamsterdamsergey.github.io/goit-react-hw-04-images/",
+  "homepage": "https://ajaxamsterdamsergey.github.io/goit-react-hw-05-movies/",
   "dependencies": {
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
@@ -21,6 +21,7 @@
     "react-icons": "^4.4.0",
     "react-loader-spinner": "^5.3.3",
     "react-number-format": "^4.9.3",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-toastify": "^9.0.8",
     "styled-components": "^5.3.5",
