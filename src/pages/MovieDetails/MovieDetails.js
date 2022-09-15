@@ -66,7 +66,7 @@ const MovieDetails = () => {
       </Box>
       <Suspense fallback={null}>
         {navItems.map(({ href, text }) => (
-          <NavItem to={href} key={href}>
+          <NavItem to={href} key={href} state={{ from: location.state?.from }}>
             {text}
           </NavItem>
         ))}
